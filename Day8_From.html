@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Day 8 Forms</title>
+    </head>
+    <body>
+        <h1>1. Basic Form Structure</h1>
+        <form action="/submit-form" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <button type="submit">Submit</button>
+        </form>
+        <hr>
+        <h1>2. Input Fields – Text, Password, and Email</h1>
+        <h2>Example 1: Text Field</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <hr>
+        <h2>Example 2: Password Field</h2>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <hr>
+        <h2>Example 3: Email Field</h2>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <hr>
+        <h1>3. Checkbox and Radio Buttons</h1>
+        <h2>Example 1: Checkbox</h2>
+        <label for="subscribe">Subscribe to newsletter:</label>
+        <input type="checkbox" id="subscribe" name="subscribe">
+        <hr>
+        <h2>Example 2: Radio Buttons</h2>
+        <label>Choose your favorite color:</label>
+        <input type="radio" id="red" name="color" value="red">
+        <label for="red">Red</label>
+        <input type="radio" id="blue" name="color" value="blue">
+        <label for="blue">Blue</label>
+        <hr>
+        <h1>4. Select Dropdown</h1>
+        <label for="city">Select your city:</label>
+        <select id="city" name="city">
+            <option value="nyc">New York</option>
+            <option value="la">Los Angeles</option>
+            <option value="sf">San Francisco</option>
+        </select>
+        <hr>
+        <h1>5. Textarea (Multi-line Text Input)</h1>
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+        <hr>
+        <h1>6. File Upload</h1>
+        <label for="file">Upload your resume:</label>
+        <input type="file" id="file" name="resume">
+        <hr>
+        <h1>7. Button Types (Submit, Reset, and Custom)</h1>
+        <h2>Example 1: Submit Button</h2>
+        <button type="submit">Submit</button>
+        <hr>
+        <h2>Example 2: Reset Button</h2>
+        <button type="reset">Reset</button>
+        <hr>
+        <h2>Example 3: Custom Button (Normal Button)</h2>
+        <button type="button" onclick="alert('Hello!')">Click Me</button>
+        <hr>
+        <h1>8. Grouping Form Elements (Fieldset & Legend)</h1>
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name">
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name">
+        </fieldset>
+        <hr>
+        <h1>9. Form Validation (Required, Pattern, Min/Max)</h1>
+        <h2>Example 1: Required Field</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <hr>
+        <h2>Example 2: Pattern (Regex) Validation</h2>
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" pattern="\d{3}[-]\d{3}[-]\d{4}" required>
+        <hr>
+        <h2>Example 3: Minimum and Maximum Value</h2>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="18" max="100" required>
+        <hr>
+        <h1>10. Form Action and Method</h1>
+        <form action="submit_form.php" method="POST">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Submit</button>
+        </form>
+        <hr>
+        <h1>11. Multiple Forms on One Page</h1>
+        <form action="login.php" method="POST">
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" name="email" required>
+            <button type="submit">Login</button>
+        </form>
+        <form action="register.php" method="POST">
+            <label for="register-email">Email:</label>
+            <input type="email" id="register-email" name="email" required>
+            <button type="submit">Register</button>
+        </form>
+        <hr>
+        <h1>12. Hidden Input Fields</h1>
+        <input type="hidden" name="user_id" value="12345">
+        <hr>
+        <h1>13. Styling Forms</h1>
+        <style>
+            input[type="text"], input[type="email"], input[type="password"] {
+              padding: 10px;
+              margin: 5px;
+              width: 100%;
+              border: 1px solid #ccc;
+            }
+            button {
+              padding: 10px 20px;
+              background-color: #4CAF50;
+              color: white;
+              border: none;
+              cursor: pointer;
+            }
+            button:hover {
+              background-color: #45a049;
+            }
+        </style>
+    </body>
+</html>
